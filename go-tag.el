@@ -224,9 +224,7 @@ It can either be displayed in its own buffer, in the echo area, or not at all."
   (let ((tmpfile (make-temp-file "go-tag" nil ".go"))
         (patchbuf (get-buffer-create "*Go-Tag patch*"))
         (errbuf (if go-tag-show-errors
-                    (get-buffer-create "*Go-Tag Errors*")))
-        (coding-system-for-read 'utf-8)
-        (coding-system-for-write 'utf-8))
+                    (get-buffer-create "*Go-Tag Errors*"))))
 
     (unwind-protect
         (save-restriction
